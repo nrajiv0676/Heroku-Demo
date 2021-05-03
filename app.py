@@ -26,14 +26,14 @@ def result():
     x=np.array([gender,age,hypertension,heart_disease,ever_married,work_type,Residence_type,
                 avg_glucose_level,bmi,smoking_status]).reshape(1,-1)
 
-    scaler_path=os.path.join('C:/Rajiv/work/DataScience/Stroke_Prediction_Dataset/Stroke-Risk-Prediction-using-Machine-Learning-master/models/scaler.pkl')
+    scaler_path=os.path.join('models/scaler.pkl')
     scaler=None
     with open(scaler_path,'rb') as scaler_file:
         scaler=pickle.load(scaler_file)
 
     x=scaler.transform(x)
 
-    model_path=os.path.join('C:/Rajiv/work/DataScience/Stroke_Prediction_Dataset/Stroke-Risk-Prediction-using-Machine-Learning-master','models/dt.sav')
+    model_path=os.path.join('models/dt.sav')
     dt=joblib.load(model_path)
 
     Y_pred=dt.predict(x)
