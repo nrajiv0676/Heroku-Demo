@@ -1,0 +1,87 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+  <h2>ML Model - Heart Stroke Prediction</h2>
+
+    <div class="container-fluid">
+        <div class="col-lg-12">
+                <form action="{{ url_for('heartStrokeResult') }}" method="post">
+                    <br>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="gender">gender</label>
+                                <input type="text" class="form-control" id="gender" name="gender" placeholder="gender">
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="age">Age</label>
+                                <input type="text" class="form-control" id="age" name="age" placeholder="Enter your Age">
+                            </div>
+                        </div>
+                        <br>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="hypertension">hypertension</label>
+                                <input type="text" class="form-control" id="hypertension" name="hypertension" placeholder="1 for Yes, 0 for No">
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="heart_disease">heart_disease </label>
+                                <input type="text" class="form-control" id="heart_disease" name="heart_disease" placeholder="1 for Yes, 0 for No">
+                            </div>
+                        </div>
+                        <br>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="ever_married">ever_married</label>
+                                <input type="text" class="form-control" id="ever_married" name="ever_married" placeholder="1 for Yes, 0 for No">
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="work_type">work_type </label>
+                                <input type="text" class="form-control" id="work_type" name="work_type" placeholder="0 for Govn Job, 1 for Never_worked, 2 for Private, 3 for Self-employed, 4 for children">
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="Residence_type">Residence_type</label>
+                                <input type="text" class="form-control" id="Residence_type" name="Residence_type" placeholder="for Urban 1, for Rural 0">
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="avg_glucose_level">avg_glucose_level</label>
+                                <input type="text" class="form-control" id="avg_glucose_level" name="avg_glucose_level" placeholder="avg_glucose_level">
+                            </div>
+                        </div>
+                        <br>
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="bmi">bmi</label>
+                                <input type="text" class="form-control" id="bmi" name="bmi" placeholder="bmi">
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <label for="smoking_status">smoking_status</label>
+                                <input type="text" class="form-control" id="smoking_status" name="smoking_status" placeholder="0 for Unknown, 1 for formerly smoked, 2 for never smoked, 3 for smokes">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <center>
+                            <button type="submit" class="btn btn-dark" value="submit">Submit</button>
+                        </center>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+{% endblock %}
